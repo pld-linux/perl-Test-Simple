@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Test
 %define		pnam	Simple
@@ -19,7 +23,7 @@ Summary(sv):	Test::Simple Perlmodul
 Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Test::Simple
 Summary(zh_CN):	Test::Simple Perl Ä£¿é
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.46
+Version:	0.47
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -53,6 +57,8 @@ testów lepiej u¿ywaæ modu³u Test::More (zastêpuj±cego ten).
 %build
 perl Makefile.PL
 %{__make}
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
