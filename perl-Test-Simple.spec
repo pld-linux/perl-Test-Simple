@@ -57,7 +57,7 @@ testów lepiej u¿ywaæ modu³u Test::More (zastêpuj±cego ten).
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{!?_without_tests:%{__make} test}
