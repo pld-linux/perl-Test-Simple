@@ -19,13 +19,12 @@ Summary(sv):	Test::Simple Perlmodul
 Summary(uk):	Модуль для Perl Test::Simple
 Summary(zh_CN):	Test::Simple Perl дё©И
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.45
-Release:	3
+Version:	0.46
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	perl(Test::Harness) >= 2.03
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
