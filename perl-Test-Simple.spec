@@ -15,6 +15,13 @@ BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# false requires found by rpm 4.0.2
+%if "%(perl -MConfig -e 'print $Config{useithreads};')" != "define"
+%define		_noautoreq	'perl(threads)' 'perl(threads::shared)'
+%else
+Requires:	perl(threads) perl(threads::shared)
+%endif
+
 %description
 This is an extremely simple, extremely basic module for writing tests
 suitable for CPAN modules and other pursuits. If you wish to do more
