@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl Test::Simple
 Summary(zh_CN):	Test::Simple Perl дё©И
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.47
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
