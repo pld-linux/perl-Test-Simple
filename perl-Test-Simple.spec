@@ -1,11 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Test
 %define	pnam	Simple
-%include	/usr/lib/rpm/macros.perl
 Summary:	Test-Simple perl module
 Summary(pl):	Modu³ perla Test-Simple
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.41
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
