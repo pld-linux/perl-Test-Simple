@@ -24,12 +24,12 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Test::Simple
 Summary(zh_CN):	Test::Simple Perl Ä£¿é
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.47
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,7 +55,8 @@ testów lepiej u¿ywaæ modu³u Test::More (zastêpuj±cego ten).
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -71,5 +72,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README TODO
-%{perl_sitelib}/Test/*.pm
+%{perl_vendorlib}/Test/*.pm
 %{_mandir}/man3/*
