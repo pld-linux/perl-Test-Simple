@@ -14,7 +14,7 @@ Summary(fr):	Module Perl Test::Simple
 Summary(it):	Modulo di Perl Test::Simple
 Summary(ja):	Test::Simple Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Test::Simple ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Test::Simple
+Summary(nb):	Perlmodul Test::Simple
 Summary(pl):	Modu³ Perla Test::Simple
 Summary(pt):	Módulo de Perl Test::Simple
 Summary(pt_BR):	Módulo Perl Test::Simple
