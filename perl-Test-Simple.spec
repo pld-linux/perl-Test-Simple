@@ -22,7 +22,7 @@ Summary(ru):	Модуль для Perl Test::Simple
 Summary(sv):	Test::Simple Perlmodul
 Summary(uk):	Модуль для Perl Test::Simple
 Summary(zh_CN):	Test::Simple Perl дё©И
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-Test-Simple
 Version:	0.47
 Release:	3
 # same as perl
