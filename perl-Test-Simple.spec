@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Test
 %define	pnam	Simple
-Summary:	Test-Simple perl module
-Summary(pl):	Modu³ perla Test-Simple
+Summary:	Test::Simple perl module
+Summary(pl):	Modu³ perla Test::Simple
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.41
 Release:	5
