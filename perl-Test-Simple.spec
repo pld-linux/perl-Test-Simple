@@ -1,11 +1,26 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Test
-%define	pnam	Simple
-Summary:	Test::Simple perl module
-Summary(pl):	Modu³ perla Test::Simple
+%define		pdir	Test
+%define		pnam	Simple
+Summary:	Test::Simple Perl module
+Summary(cs):	Modul Test::Simple pro Perl
+Summary(da):	Perlmodul Test::Simple
+Summary(de):	Test::Simple Perl Modul
+Summary(es):	Módulo de Perl Test::Simple
+Summary(fr):	Module Perl Test::Simple
+Summary(it):	Modulo di Perl Test::Simple
+Summary(ja):	Test::Simple Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	Test::Simple ÆŞ ¸ğÁÙ
+Summary(no):	Perlmodul Test::Simple
+Summary(pl):	Modu³ Perla Test::Simple
+Summary(pt):	Módulo de Perl Test::Simple
+Summary(pt_BR):	Módulo Perl Test::Simple
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Test::Simple
+Summary(sv):	Test::Simple Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Test::Simple
+Summary(zh_CN):	Test::Simple Perl Ä£¿é
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.45
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -51,5 +66,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README TODO
-%{perl_sitelib}/Test
+%{perl_sitelib}/Test/*.pm
 %{_mandir}/man3/*
