@@ -5,31 +5,16 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Test
 %define		pnam	Simple
-Summary:	Test::Simple Perl module
-Summary(cs):	Modul Test::Simple pro Perl
-Summary(da):	Perlmodul Test::Simple
-Summary(de):	Test::Simple Perl Modul
-Summary(es):	Módulo de Perl Test::Simple
-Summary(fr):	Module Perl Test::Simple
-Summary(it):	Modulo di Perl Test::Simple
-Summary(ja):	Test::Simple Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Test::Simple ÆÞ ¸ðÁÙ
-Summary(nb):	Perlmodul Test::Simple
-Summary(pl):	Modu³ Perla Test::Simple
-Summary(pt):	Módulo de Perl Test::Simple
-Summary(pt_BR):	Módulo Perl Test::Simple
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Test::Simple
-Summary(sv):	Test::Simple Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Test::Simple
-Summary(zh_CN):	Test::Simple Perl Ä£¿é
+Summary:	Test::Simple - basic utilities for writing tests
+Summary(pl):	Test::Simple - podstawowe narzêdzia do pisania testów
 Name:		perl-Test-Simple
-Version:	0.49
+Version:	0.50
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e22ed16f8451c64277c7ef4fbd55251a
+# Source0-md5:	df12f1f522307850577992d2da5ba04f
 # Source0-size:	51334
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -44,18 +29,30 @@ Requires:	perl(threads) perl(threads::shared)
 %endif
 
 %description
-This is an extremely simple, extremely basic module for writing tests
-suitable for CPAN modules and other pursuits. If you wish to do more
-complicated testing, use the Test::More module (a drop-in replacement
+AHHHHHHH!!!!  NOT TESTING!  Anything but testing!  Beat me, whip me,
+send me to Detroit, but don't make me write tests!
+	-- perldoc Test::Tutorial
+
+Test::Simple is an extremely simple, extremely basic module for writing
+tests suitable for CPAN modules and other pursuits. If you wish to do
+more complicated testing, use the Test::More module (a drop-in replacement
 for this one).
 
-%description -l pl
-To jest bardzo prosty, bardzo podstawowy modu³ do pisania testów
-pasuj±cych do modu³ów CPAN i innych. Do bardziej skomplikowanych
-testów lepiej u¿ywaæ modu³u Test::More (zastêpuj±cego ten).
+The purpose of Test::More is to provide a wide range of testing utilities.
+Various ways to say "ok" with better diagnostics, facilities to skip
+tests, test future features and compare complicated data structures.
+While you can do almost anything with a simple "ok()" function, it
+doesn't provide good diagnostic output.
+
+#%description -l pl
+#Test::Simple jest bardzo prostym, bardzo podstawowym modu³em do pisania
+#testów pasuj±cych do modu³ów CPAN i innych. Do bardziej skomplikowanych
+#testów lepiej u¿ywaæ modu³u Test::More (zastêpuj±cego ten).
+# to be updated
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+rm -f t/00signature.t
 
 %build
 %{__perl} Makefile.PL \
