@@ -5,12 +5,12 @@ Summary:	Test::Simple perl module
 Summary(pl):	Modu³ perla Test::Simple
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.45
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	perl(Test::Harness)
+BuildRequires:	perl(Test::Harness) >= 2.03
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
