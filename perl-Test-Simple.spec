@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl Test::Simple
 Summary(zh_CN):	Test::Simple Perl дё©И
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.47
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
