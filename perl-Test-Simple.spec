@@ -19,6 +19,7 @@ URL:		http://search.cpan.org/dist/Test-Simple/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl-Test-Builder-Tester = 1.04
+Obsoletes:	perl-Test-Builder-Tester = 0:1.01
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
