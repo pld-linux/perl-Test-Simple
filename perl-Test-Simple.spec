@@ -9,7 +9,7 @@ Summary:	Test::Simple - basic utilities for writing tests
 Summary(pl):	Test::Simple - podstawowe narzêdzia do pisania testów
 Name:		perl-Test-Simple
 Version:	0.64
-Release:	0.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -18,6 +18,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 URL:		http://search.cpan.org/dist/Test-Simple/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Provides:	perl-Test-Builder-Tester = 1.04
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
