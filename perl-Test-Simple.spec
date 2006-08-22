@@ -27,13 +27,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %if "%(perl -MConfig -e 'print $Config{useithreads};')" != "define"
 %define		_noautoreq	'perl(threads)' 'perl(threads::shared)'
 %else
-Requires:	perl(threads) perl(threads::shared)
+Requires:	perl(threads)
+Requires:	perl(threads::shared)
 %endif
 
 %description
-AHHHHHHH!!!!  NOT TESTING!  Anything but testing!  Beat me, whip me,
-send me to Detroit, but don't make me write tests!
-	-- perldoc Test::Tutorial
+AHHHHHHH!!!! NOT TESTING! Anything but testing! Beat me, whip me, send
+me to Detroit, but don't make me write tests!
+ - -- perldoc Test::Tutorial
 
 Test::Simple is an extremely simple, extremely basic module for
 writing tests suitable for CPAN modules and other pursuits. If you
@@ -47,9 +48,10 @@ data structures. While you can do almost anything with a simple "ok()"
 function, it doesn't provide good diagnostic output.
 
 %description -l pl
-AAAAAAAA!!! NIE TESTOWANIE! Wszystko tylko nie testowanie! Bijcie mnie,
-biczujcie mnie, wy¶lijcie do Detroit, ale nie ka¿cie pisaæ testów!
-	-- perldoc Test::Tutorial
+AAAAAAAA!!! NIE TESTOWANIE! Wszystko tylko nie testowanie! Bijcie
+mnie, biczujcie mnie, wy¶lijcie do Detroit, ale nie ka¿cie pisaæ
+testów!
+ - -- perldoc Test::Tutorial
 
 Test::Simple jest bardzo prostym, bardzo podstawowym modu³em do
 pisania testów pasuj±cych do modu³ów CPAN i innych. Do bardziej
@@ -58,8 +60,8 @@ ten).
 
 Celem Test::More jest dostarczenie szerokiego zakresu narzêdzi do
 testowania. Ró¿ne sposoby powiedzenia "ok" z lepsz± diagnostyk±,
-u³atwienia przy pomijaniu testów, testowaniu przysz³ych mo¿liwo¶ci
-i porównywaniu skomplikowanych struktur danych. O ile mo¿na zrobiæ
+u³atwienia przy pomijaniu testów, testowaniu przysz³ych mo¿liwo¶ci i
+porównywaniu skomplikowanych struktur danych. O ile mo¿na zrobiæ
 prawie wszystko prost± funkcj± "ok()", nie daje ona dobrego wyj¶cia
 diagnostycznego.
 
@@ -80,6 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Test/Tutorial.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
