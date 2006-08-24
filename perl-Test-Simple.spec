@@ -23,18 +23,12 @@ Obsoletes:	perl-Test-Builder-Tester = 0:1.01
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-# false requires found by rpm 4.0.2
-%if "%(perl -MConfig -e 'print $Config{useithreads};')" != "define"
 %define		_noautoreq	'perl(threads)' 'perl(threads::shared)'
-%else
-Requires:	perl(threads)
-Requires:	perl(threads::shared)
-%endif
 
 %description
 AHHHHHHH!!!! NOT TESTING! Anything but testing! Beat me, whip me, send
 me to Detroit, but don't make me write tests!
- - -- perldoc Test::Tutorial
+   -- perldoc Test::Tutorial
 
 Test::Simple is an extremely simple, extremely basic module for
 writing tests suitable for CPAN modules and other pursuits. If you
@@ -51,7 +45,7 @@ function, it doesn't provide good diagnostic output.
 AAAAAAAA!!! NIE TESTOWANIE! Wszystko tylko nie testowanie! Bijcie
 mnie, biczujcie mnie, wy¶lijcie do Detroit, ale nie ka¿cie pisaæ
 testów!
- - -- perldoc Test::Tutorial
+   -- perldoc Test::Tutorial
 
 Test::Simple jest bardzo prostym, bardzo podstawowym modu³em do
 pisania testów pasuj±cych do modu³ów CPAN i innych. Do bardziej
