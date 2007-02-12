@@ -6,7 +6,7 @@
 %define		pdir	Test
 %define		pnam	Simple
 Summary:	Test::Simple - basic utilities for writing tests
-Summary(pl):	Test::Simple - podstawowe narzêdzia do pisania testów
+Summary(pl.UTF-8):   Test::Simple - podstawowe narzÄ™dzia do pisania testÃ³w
 Name:		perl-Test-Simple
 Version:	0.66
 Release:	1
@@ -42,22 +42,22 @@ facilities to skip tests, test future features and compare complicated
 data structures. While you can do almost anything with a simple "ok()"
 function, it doesn't provide good diagnostic output.
 
-%description -l pl
+%description -l pl.UTF-8
 AAAAAAAA!!! NIE TESTOWANIE! Wszystko tylko nie testowanie! Bijcie
-mnie, biczujcie mnie, wy¶lijcie do Detroit, ale nie ka¿cie pisaæ
-testów!
+mnie, biczujcie mnie, wyÅ›lijcie do Detroit, ale nie kaÅ¼cie pisaÄ‡
+testÃ³w!
    -- perldoc Test::Tutorial
 
-Test::Simple jest bardzo prostym, bardzo podstawowym modu³em do
-pisania testów pasuj±cych do modu³ów CPAN i innych. Do bardziej
-skomplikowanych testów lepiej u¿ywaæ modu³u Test::More (zastêpuj±cego
+Test::Simple jest bardzo prostym, bardzo podstawowym moduÅ‚em do
+pisania testÃ³w pasujÄ…cych do moduÅ‚Ã³w CPAN i innych. Do bardziej
+skomplikowanych testÃ³w lepiej uÅ¼ywaÄ‡ moduÅ‚u Test::More (zastÄ™pujÄ…cego
 ten).
 
-Celem Test::More jest dostarczenie szerokiego zakresu narzêdzi do
-testowania. Ró¿ne sposoby powiedzenia "ok" z lepsz± diagnostyk±,
-u³atwienia przy pomijaniu testów, testowaniu przysz³ych mo¿liwo¶ci i
-porównywaniu skomplikowanych struktur danych. O ile mo¿na zrobiæ
-prawie wszystko prost± funkcj± "ok()", nie daje ona dobrego wyj¶cia
+Celem Test::More jest dostarczenie szerokiego zakresu narzÄ™dzi do
+testowania. RÃ³Å¼ne sposoby powiedzenia "ok" z lepszÄ… diagnostykÄ…,
+uÅ‚atwienia przy pomijaniu testÃ³w, testowaniu przyszÅ‚ych moÅ¼liwoÅ›ci i
+porÃ³wnywaniu skomplikowanych struktur danych. O ile moÅ¼na zrobiÄ‡
+prawie wszystko prostÄ… funkcjÄ… "ok()", nie daje ona dobrego wyjÅ›cia
 diagnostycznego.
 
 %prep
