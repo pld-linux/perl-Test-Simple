@@ -6,7 +6,7 @@
 %define		pdir	Test
 %define		pnam	Simple
 Summary:	Test::Simple - basic utilities for writing tests
-Summary(pl.UTF-8):   Test::Simple - podstawowe narzędzia do pisania testów
+Summary(pl.UTF-8):	Test::Simple - podstawowe narzędzia do pisania testów
 Name:		perl-Test-Simple
 Version:	0.66
 Release:	1
