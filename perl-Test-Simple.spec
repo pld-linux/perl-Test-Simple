@@ -8,18 +8,18 @@
 Summary:	Test::Simple - basic utilities for writing tests
 Summary(pl.UTF-8):	Test::Simple - podstawowe narzędzia do pisania testów
 Name:		perl-Test-Simple
-Version:	0.94
+Version:	0.96
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/MS/MSCHWERN/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e4e09d8bf2cc73124152ba2c45c95b5b
+# Source0-md5:	fbc734a7bb5b3fc3e2bc706e19d08b26
 URL:		http://search.cpan.org/dist/Test-Simple/
 %{?with_tests:BuildRequires:	perl-Test-Harness >= 2.03}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Provides:	perl-Test-Builder-Tester = 1.07
+Provides:	perl-Test-Builder-Tester = 1.20
 Obsoletes:	perl-Test-Builder-Tester = 0:1.01
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -88,4 +88,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README TODO
 %{perl_vendorlib}/Test/*.pm
 %{perl_vendorlib}/Test/Builder
-%{_mandir}/man3/*
+%{_mandir}/man3/Test::*.3pm*
