@@ -19,7 +19,7 @@ URL:		http://search.cpan.org/dist/Test-Simple/
 %{?with_tests:BuildRequires:	perl-Test-Harness >= 2.03}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Provides:	perl-Test-Builder-Tester = 1.20
+Provides:	perl-Test-Builder-Tester = 1.22
 Obsoletes:	perl-Test-Builder-Tester = 0:1.01
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
