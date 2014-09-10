@@ -8,18 +8,19 @@
 Summary:	Test::Simple - basic utilities for writing tests
 Summary(pl.UTF-8):	Test::Simple - podstawowe narzędzia do pisania testów
 Name:		perl-Test-Simple
-Version:	0.98
+Version:	1.001_006
+%define	fver	%(echo %{version} | tr -d _)
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/M/MS/MSCHWERN/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a8b26c97440269b33dd79fd847c521d8
+Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{fver}.tar.gz
+# Source0-md5:	581ac4d2d7ace1f56409bc112e8ad02c
 URL:		http://search.cpan.org/dist/Test-Simple/
 %{?with_tests:BuildRequires:	perl-Test-Harness >= 2.03}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Provides:	perl-Test-Builder-Tester = 1.22
+Provides:	perl-Test-Builder-Tester = 1.24
 Obsoletes:	perl-Test-Builder-Tester = 0:1.01
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -61,8 +62,7 @@ prawie wszystko prostą funkcją "ok()", nie daje ona dobrego wyjścia
 diagnostycznego.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
-rm -f t/00signature.t
+%setup -q -n %{pdir}-%{pnam}-%{fver}
 %{__perl} -nli -e 'print unless /^\s+sleep\s+\d+;\s*/' Makefile.PL
 
 %build
@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Test/Tutorial.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/Test/Tutorial.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -86,6 +86,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README TODO
-%{perl_vendorlib}/Test/*.pm
 %{perl_vendorlib}/Test/Builder
-%{_mandir}/man3/Test::*.3pm*
+%{perl_vendorlib}/Test/Builder.pm
+%{perl_vendorlib}/Test/More.pm
+%{perl_vendorlib}/Test/Simple.pm
+%{_mandir}/man3/Test::Builder*.3pm*
+%{_mandir}/man3/Test::More.3pm*
+%{_mandir}/man3/Test::Simple.3pm*
+%{_mandir}/man3/Test::Tutorial.3pm*
