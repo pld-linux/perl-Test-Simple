@@ -8,14 +8,14 @@
 Summary:	Test::Simple - basic utilities for writing tests
 Summary(pl.UTF-8):	Test::Simple - podstawowe narzędzia do pisania testów
 Name:		perl-Test-Simple
-Version:	1.001_006
+Version:	1.302062
 %define	fver	%(echo %{version} | tr -d _)
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{fver}.tar.gz
-# Source0-md5:	581ac4d2d7ace1f56409bc112e8ad02c
+# Source0-md5:	d869f6754eccc38484da7e21e9c7bbcc
 URL:		http://search.cpan.org/dist/Test-Simple/
 %{?with_tests:BuildRequires:	perl-Test-Harness >= 2.03}
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -85,12 +85,22 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README TODO
+%doc Changes README 
+%{perl_vendorlib}/ok.pm
 %{perl_vendorlib}/Test/Builder
 %{perl_vendorlib}/Test/Builder.pm
 %{perl_vendorlib}/Test/More.pm
 %{perl_vendorlib}/Test/Simple.pm
+%{perl_vendorlib}/Test/Tester
+%{perl_vendorlib}/Test/Tester.pm
+%{perl_vendorlib}/Test/use
+%{perl_vendorlib}/Test2.pm
+%{perl_vendorlib}/Test2
 %{_mandir}/man3/Test::Builder*.3pm*
 %{_mandir}/man3/Test::More.3pm*
 %{_mandir}/man3/Test::Simple.3pm*
+%{_mandir}/man3/Test::Tester*.3pm*
 %{_mandir}/man3/Test::Tutorial.3pm*
+%{_mandir}/man3/Test::use::ok.3pm*
+%{_mandir}/man3/Test2*.3pm*
+%{_mandir}/man3/ok.3pm*
