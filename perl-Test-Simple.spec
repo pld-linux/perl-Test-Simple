@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Test::Simple - podstawowe narzędzia do pisania testów
 Name:		perl-Test-Simple
 Version:	1.302062
 %define	fver	%(echo %{version} | tr -d _)
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -20,8 +20,12 @@ URL:		http://search.cpan.org/dist/Test-Simple/
 %{?with_tests:BuildRequires:	perl-Test-Harness >= 2.03}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Provides:	perl-Test-Builder-Tester = 1.24
-Obsoletes:	perl-Test-Builder-Tester = 0:1.01
+# see lib/Test/Builder/Tester.pm /VERSION
+Provides:	perl-Test-Builder-Tester = %{version}
+# see lib/Test/Tester.pm /VERSION
+Provides:	perl-Test-Tester = %{version}
+Obsoletes:	perl-Test-Builder-Tester < %{version}
+Obsoletes:	perl-Test-Tester < %{version}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -85,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README 
+%doc Changes README
 %{perl_vendorlib}/ok.pm
 %{perl_vendorlib}/Test/Builder
 %{perl_vendorlib}/Test/Builder.pm
