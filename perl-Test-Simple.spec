@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Test::Simple - podstawowe narzędzia do pisania testów
 Name:		perl-Test-Simple
 Version:	1.302062
 %define	fver	%(echo %{version} | tr -d _)
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -24,9 +24,15 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl-Test-Builder-Tester = %{version}
 # see lib/Test/Tester.pm /VERSION
 Provides:	perl-Test-Tester = %{version}
-# obsolete only versions up to last standalone (Test::Builder::Tester 1.01, Test::Tester 0.109) to avoid obsoleting perl-modules
+# see lib/Test/use/ok.pm /VERSION
+Provides:	perl-Test-use-ok = %{version}
+# obsolete only versions up to last standalone release to avoid obsoleting perl-modules
+# Test::Builder::Tester 1.01
+# Test::Tester 0.109
+# Test::use::ok 0.11
 Obsoletes:	perl-Test-Builder-Tester < 1.02
 Obsoletes:	perl-Test-Tester < 0.110
+Obsoletes:	perl-Test-use-ok < 0.12
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
