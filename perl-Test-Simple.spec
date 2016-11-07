@@ -24,8 +24,9 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl-Test-Builder-Tester = %{version}
 # see lib/Test/Tester.pm /VERSION
 Provides:	perl-Test-Tester = %{version}
-Obsoletes:	perl-Test-Builder-Tester < %{version}
-Obsoletes:	perl-Test-Tester < %{version}
+# obsolete only versions up to last standalone (Test::Builder::Tester 1.01, Test::Tester 0.109) to avoid obsoleting perl-modules
+Obsoletes:	perl-Test-Builder-Tester < 1.02
+Obsoletes:	perl-Test-Tester < 0.110
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
