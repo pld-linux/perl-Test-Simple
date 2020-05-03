@@ -7,6 +7,7 @@
 Summary:	Test::Simple - basic utilities for writing tests
 Summary(pl.UTF-8):	Test::Simple - podstawowe narzędzia do pisania testów
 Name:		perl-Test-Simple
+# NOTE: perl 5.30 provides 1.302162
 Version:	1.302140
 %define	fver	%(echo %{version} | tr -d _)
 Release:	1
@@ -19,6 +20,7 @@ URL:		https://metacpan.org/release/Test-Simple
 %{?with_tests:BuildRequires:	perl-Test-Harness >= 2.03}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 # see lib/Test/Builder/Tester.pm /VERSION
 Provides:	perl-Test-Builder-Tester = %{version}
 # see lib/Test/Tester.pm /VERSION
