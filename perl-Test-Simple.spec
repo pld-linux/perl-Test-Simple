@@ -7,15 +7,15 @@
 Summary:	Test::Simple - basic utilities for writing tests
 Summary(pl.UTF-8):	Test::Simple - podstawowe narzędzia do pisania testów
 Name:		perl-Test-Simple
-# NOTE: perl 5.30 provides 1.302162
-Version:	1.302140
+# NOTE: perl 5.32 provides 1.302175
+Version:	1.302183
 %define	fver	%(echo %{version} | tr -d _)
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{fver}.tar.gz
-# Source0-md5:	2a3eba9fbafe80a24ce75b604ab045f1
+# Source0-md5:	b9bd0b573de649893dbd1d746691cd0a
 URL:		https://metacpan.org/release/Test-Simple
 %{?with_tests:BuildRequires:	perl-Test-Harness >= 2.03}
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -37,7 +37,7 @@ Obsoletes:	perl-Test-use-ok < 0.12
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	'perl(threads)' 'perl(threads::shared)'
+%define		_noautoreq_perl	threads threads::shared
 
 %description
 AHHHHHHH!!!! NOT TESTING! Anything but testing! Beat me, whip me, send
